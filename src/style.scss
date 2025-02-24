@@ -1,0 +1,30 @@
+// src/styles.scss
+$bg-color: #f2effb;
+$bg-primary-color: #714ac9;
+$bg-secondary-color: #ccb7ff;
+$white-color: white;
+$border-color: #ccc;
+$border-focus-color: #714ac9;
+$border-hover-color: #8d70d9;
+$black-primary-color: #333; 
+$responsive-breakpoint: 798px;
+
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body {
+    font-family: "Poppins", serif;
+    background-color: $bg-color;
+    width: 100%;
+}
+
+.app{
+  padding: 33px 33px;
+
+  @media (max-width:768px) {
+    padding: 20px 20px;
+  }
+}
+  

@@ -1,0 +1,91 @@
+@use '../../style.scss';
+
+.details{
+    &__header{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        // justify-content: space-between;
+        gap: 80px;
+
+        @media (max-width: 768px) {
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+            gap: 40px;
+        }
+    }
+    
+    &__image{
+        height: 320px;
+        width: 320px;
+        border-radius: 50%;
+        object-fit: cover; 
+
+        @media (max-width:768px){
+            height: 220px;
+            width: 220px;
+        }
+    }
+
+    &__main{
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    &__description{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        &--items{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        &--items a{
+            text-decoration: none;
+            color: black;
+        }
+
+        @media (max-width:768px) {
+            align-items: center;
+        }
+    }
+
+    &__socials{
+        display: flex;
+        gap: 20px;
+        
+        & a{
+            text-decoration: none;
+            color: style.$black-primary-color;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            justify-content: center;
+        }
+    }
+    
+    &__skills{
+        text-align: center;
+        padding: 12px 0px;
+        margin: 30px 0px;
+        &--items{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            row-gap: 40px;
+            justify-content: space-evenly;
+            padding: 30px 0px;
+            &--img{
+                height: 50px;
+                width: 50px;
+            }
+        }
+    }
+        
+}

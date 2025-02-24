@@ -1,0 +1,13 @@
+@use "../../style.scss";
+.nav-bar {
+    background: style.$bg-primary-color;
+    padding: 20px 0px;
+    &__items{
+      list-style: none;
+      color: style.$white-color;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      cursor: pointer;
+    }
+}

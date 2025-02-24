@@ -1,0 +1,25 @@
+@use "../../style.scss";
+
+.about{
+    &__title{
+        text-align: center;
+    }
+    &__details{
+        display: flex;
+        flex-direction: column;
+        padding: 20px 0px;
+        gap: 20px;
+    }
+}
+.experience{
+    &__header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+    &__details li{
+        list-style-position: inside;
+        padding-top: 12px; 
+    }
+}

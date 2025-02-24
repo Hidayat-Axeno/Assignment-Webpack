@@ -1,0 +1,42 @@
+@use "../../style.scss";
+
+.main-footer{
+    background: style.$white-color;
+    color: style.$black-primary-color;
+    padding: 10px 0px;
+    width: 100%;
+    bottom: 0;
+    
+    &__head{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        row-gap: 30px;
+        padding: 12px 80px;
+        
+        &-links{
+            list-style: none;
+
+            & a{
+                text-decoration: none;
+                color: style.$black-primary-color;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+        }
+    }
+
+    &__title{
+        text-align: center;
+    }
+
+    &__contact{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+}

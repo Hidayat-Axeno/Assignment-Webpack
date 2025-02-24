@@ -1,0 +1,66 @@
+<div class="container">
+  <h2 class="container__title">Create your account</h2>
+  <form id="registrationForm">
+    <div class="form-group">
+      <!-- Name -->
+      <label for="name">Name*</label>
+      <input
+        type="text"
+        name="name"
+        id="name"
+        minlength="3"
+        required
+        autocomplete="on"
+      />
+      <span class="error-message" id="nameError"></span>
+    </div>
+
+    <!-- Email -->
+    <div class="form-group">
+      <label for="email">Email*</label>
+      <input
+        type="email"
+        name="email"
+        id="email"
+        placeholder="abc@example.com"
+        required
+        autocomplete="on"
+      />
+      <span class="error-message" id="emailError"></span>
+    </div>
+
+    <!-- Phone Number -->
+    <div class="form-group">
+      <label for="phoneNumber">Phone Number</label>
+      <input
+        type="tel"
+        name="phoneNumber"
+        id="phoneNumber"
+        maxlength="10"
+        minlength="10"
+      />
+      <span class="error-message" id="phoneNumberError"></span>
+    </div>
+
+    <!-- Password -->
+    <div class="form-group">
+      <label for="password">Password*</label>
+      <input
+        type="password"
+        name="password"
+        id="password"
+        minlength="8"
+        required
+      />
+      <span class="error-message" id="passwordError"></span>
+    </div>
+
+    <!-- Submi Button -->
+    <button type="submit">Create account</button>
+  </form>
+  <p class="success-message" id="success-message"></p>
+</div>
+
+<!-- Validator JS File -->
+<!-- <script src="./validator.js"></script> -->
+<!-- <script src="./dist/contact.js"></script> -->
