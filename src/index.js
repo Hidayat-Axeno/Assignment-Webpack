@@ -7,6 +7,8 @@ import "./pages/home/home.scss";
 import "./pages/contact/contact.scss";
 import {setupEvents} from './pages/contact/validator';
 import logo from "./assets/profile.jpeg";
+import internshipBG1 from "./assets/intern2.png";
+import internshipBG2 from "./assets/intern1.png";
 
 const appDiv = document.getElementById("app");
 
@@ -78,15 +80,24 @@ function render() {
       const imgElement = document.querySelector(".details__image");
       imgElement.src = logo;
       loadTechSkills();
+      fetch("./components/about/about.html")
+        .then((response) => response.text())
+        .then((data) => {
+          appDiv.insertAdjacentHTML("beforeend", data);
+          const imgElement1 = document.querySelector(".experienceImg1");
+          const imgElement2 = document.querySelector(".experienceImg2");
+          imgElement1.src = internshipBG1;
+          imgElement2.src = internshipBG2;
+        })
+        .catch((error) => console.error(`Error loading ./components/about/about.html:`, error));
     });
-    fetch("./components/about/about.html")
-      .then((response) => response.text())
-      .then((data) => {
-        appDiv.insertAdjacentHTML("beforeend", data);
-      })
-      .catch((error) => console.error(`Error loading ${file}:`, error));
   } else if (pathname === "/about") {
-    loadComponent("app", "./components/about/about.html");
+    loadComponent("app", "./components/about/about.html",()=>{
+      const imgElement1 = document.querySelector(".experienceImg1");
+          const imgElement2 = document.querySelector(".experienceImg2");
+          imgElement1.src = internshipBG1;
+          imgElement2.src = internshipBG2;
+    });
   } else if (pathname === "/contact") {
     loadComponent("app", "./pages/contact/contact.html",  ()=> setupEvents());
   } else {
